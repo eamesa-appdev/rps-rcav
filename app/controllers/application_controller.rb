@@ -9,12 +9,16 @@ class ApplicationController < ActionController::Base
     #redirect_to("https://en.wikipedia.org/wiki/Rock")
   end
 
+  def homepage
+   render ({ :template => "game_templates/rules.html.erb"})
+  end
+
   def play_paper
-    redirect_to("https://www.wikipedia.org/wiki/Paper")
+    render ({ :template => "game_templates/user_paper.html.erb"})
   end
 
   def play_scissors
-    redirect_to("https://www.wikipedia.org/wiki/Scissors")
+    render ({ :template => "game_templates/user_scissors.html.erb"})
   end
 
 
